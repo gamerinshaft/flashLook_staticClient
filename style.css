@@ -1,0 +1,153 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  overflow: scroll;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding:40px;
+  padding-top: 40px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  background: -moz-linear-gradient(270deg, rgba(181,77,234,1) 0%, rgba(37,81,195,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(181,77,234,1)), color-stop(100%, rgba(37,81,195,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(270deg, rgba(181,77,234,1) 0%, rgba(37,81,195,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(270deg, rgba(181,77,234,1) 0%, rgba(37,81,195,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(270deg, rgba(181,77,234,1) 0%, rgba(37,81,195,1) 100%); /* ie10+ */
+  background: linear-gradient(180deg, rgba(181,77,234,1) 0%, rgba(37,81,195,1) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B54DEA', endColorstr='#2551C3',GradientType=0 ); /* ie6-9 */
+  opacity: 0.9;
+}
+
+#main hr {
+  border: none;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.18);
+  margin-top: 12px;
+  margin-bottom: 0px;
+}
+
+#main .time {
+  width: 76px;
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 8px;
+  color: rgba(0, 0, 0, 0.6);
+  height: 64px;
+  box-sizing: border-box;
+}
+
+#main .time.now {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+section {
+  overflow: hidden;
+}
+
+section .time-stamp {
+  width: calc(100% - 84px);
+  display: inline-block;
+  text-align: center;
+}
+
+section .time-stamp .stamp-start, section .time-stamp .stamp-end, section .time-stamp .stamp-continue {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-color: navajowhite;
+  border-radius: 50%;
+  background-color: rgba(22, 255, 253, 0.7);
+  border: solid 4px rgb(65, 23, 130);
+  position: relative;
+  z-index: 22;
+}
+
+section .time-stamp .stamp-continue {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+section .time-stamp .stamp-start:after, section .time-stamp .stamp-end:after, section .time-stamp .stamp-continue:after  {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 4px;
+  background-color: rgb(65, 23,130);
+  left: 10px;
+  height: 40px;
+  z-index: 0;
+}
+
+section .time-stamp .stamp-continue:after  {
+  height: 80px;
+  top: -22px;
+}
+
+
+
+section .time-stamp .stamp-start:after {
+  top: 100%;
+}
+
+section .time-stamp .stamp-end:after {
+  bottom: 100%;
+}
+#date {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  z-index: 22;
+}
+
+#date h1 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 24px;
+  color: rgba(255,255,255,0.6);
+}
+
+
+.back-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.back-image img {
+  position: absolute;
+  left: calc(50% - 90px);
+  top: calc(50% - 90px);
+  width: 180px;
+  height: 180px;
+}
+
+.lab_name {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 22;
+  right: 0px;
+  bottom: 16px;
+  padding: 8px;
+  border: solid 1px black;
+  border-radius: 24px 0px 0px 24px;
+  padding-left: 14px;
+  background-color: black;
+  color: white;
+}
